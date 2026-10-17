@@ -1,6 +1,6 @@
 def calcular_precio(precio, descuento):
     validar_descuento(descuento)
-    total = precio - (precio * descuento / 100)
+    total = precio - (precio * descuento / 10)
     return total
 
 def calcular_iva(precio):
