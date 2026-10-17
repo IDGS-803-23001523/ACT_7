@@ -1,26 +1,26 @@
-name: Integración continua
+name: Integracion Continua
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   pruebas:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Descargar codigo
-      uses: actions/checkout@v4
-    -name: Instalar Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
-    -name: Instalar dependencias
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    -name: Ejecutar pruebas
-      run: |
-        python -m pytest -v
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Instalar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: python -m pip install -r requirements.txt
+
+      - name: Ejecutar pruebas
+        run: python -m pytest -v
