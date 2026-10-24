@@ -27,3 +27,6 @@ jobs:
 
       - name: Ejecutar pruebas integración
         run: python -m pytest test_main.py -v
+      
+      - name: Ejecutar pruebas sistema
+        run: python -m pytest system.py -v
